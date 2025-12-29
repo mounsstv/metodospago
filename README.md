@@ -1,5 +1,23 @@
 # 💳 Página de Métodos de Pago
 
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+## 📖 Descripción
+
+**Página web profesional de métodos de pago** diseñada con una estética moderna tipo gamer, que ofrece una experiencia visual impactante y funcional para facilitar transacciones digitales. Esta aplicación web presenta múltiples opciones de pago populares en Perú, incluyendo billeteras digitales (Yape, Plin, BIM, Prexpe), pagos con QR y tarjetas de crédito/débito.
+
+### 🎯 Propósito
+Proporcionar una interfaz única, atractiva y fácil de usar para que los clientes puedan realizar pagos de manera rápida y segura, con instrucciones claras para cada método de pago y códigos QR listos para escanear.
+
+### 🌟 Destacados
+- **Diseño Premium**: Interfaz con animaciones de partículas, gradientes dinámicos y efectos 3D
+- **UX Optimizada**: Modal interactivo que muestra QR e instrucciones lado a lado
+- **100% Responsive**: Adaptado perfectamente a cualquier dispositivo
+- **Sin Dependencias**: Código vanilla (HTML, CSS, JS puro) sin frameworks
+- **Alto Rendimiento**: Optimizado con debouncing y lazy loading
+
 Página web profesional y moderna para mostrar métodos de pago disponibles con diseño gamer y animaciones interactivas.
 
 ## 👨‍💻 Autor

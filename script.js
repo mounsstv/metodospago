@@ -197,28 +197,71 @@ function copyText(elementId) {
     const element = document.getElementById(elementId);
     const text = element.textContent;
 
-    navigator.clipboard.writeText(text).then(() => {
-        showToast('¡Copiado al portapapeles!');
-    }).catch(err => {
-        console.error('Error al copiar:', err);
-
-        // Fallback for older browsers
-        const textArea = document.createElement('textarea');
-        textArea.value = text;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-999999px';
-        document.body.appendChild(textArea);
-        textArea.select();
-
-        try {
-            document.execCommand('copy');
+    // Modern Clipboard API (iOS 13.4+, Android 10+)
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
             showToast('¡Copiado al portapapeles!');
-        } catch (err) {
-            showToast('Error al copiar', 'error');
-        }
+        }).catch(err => {
+            console.error('Error al copiar:', err);
+            fallbackCopyText(text);
+        });
+    } else {
+        // Fallback for older browsers
+        fallbackCopyText(text);
+    }
+}
 
-        document.body.removeChild(textArea);
-    });
+function fallbackCopyText(text) {
+    // Create temporary textarea
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+
+    // Make it invisible and non-interactive
+    textArea.style.position = 'fixed';
+    textArea.style.top = '0';
+    textArea.style.left = '0';
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+    textArea.style.padding = '0';
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+    textArea.style.background = 'transparent';
+    textArea.style.opacity = '0';
+
+    // iOS specific
+    textArea.contentEditable = true;
+    textArea.readOnly = false;
+
+    document.body.appendChild(textArea);
+
+    // Select text
+    if (navigator.userAgent.match(/ipad|iphone/i)) {
+        // iOS specific selection
+        const range = document.createRange();
+        range.selectNodeContents(textArea);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+    } else {
+        textArea.select();
+    }
+
+    // Copy to clipboard
+    try {
+        const successful = document.execCommand('copy');
+        if (successful) {
+            showToast('¡Copiado al portapapeles!');
+        } else {
+            showToast('No se pudo copiar', 'error');
+        }
+    } catch (err) {
+        console.error('Error al copiar:', err);
+        showToast('Error al copiar', 'error');
+    }
+
+    document.body.removeChild(textArea);
 }
 
 function showToast(message) {
