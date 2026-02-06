@@ -3,233 +3,236 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Mobile Optimization -->
-    <meta name="theme-color" content="#0f172a">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="Métodos de Pago">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone=yes">
-    <meta name="format-detection" content="address=no">
-
-    <!-- Android Chrome -->
-    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
-    <meta name="color-scheme" content="dark light">
-
-    <title>Métodos de Pago - Victor Cuaresma Salhuana</title>
-    <meta name="description"
-        content="Página de métodos de pago para Victor Cuaresma Salhuana - Analista de Sistemas. Acepto Yape, Plin, Prexpe, BIM y tarjetas de crédito/débito.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Cuaresma Salhuana - Pagos</title>
+    <meta name="description" content="Página de pagos de Victor Cuaresma Salhuana, Analista de Sistemas">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- Animated Background -->
-    <div class="background-wrapper">
-        <div class="gradient-bg"></div>
-        <div class="mesh-gradient"></div>
-        <canvas id="particleCanvas"></canvas>
-    </div>
-
-    <!-- Main Container -->
     <div class="container">
-        <!-- Header -->
-        <header class="header-section">
-            <div class="profile-card">
-                <div class="avatar-wrapper">
-                    <div class="avatar-ring"></div>
-                    <div class="avatar">VC</div>
+        <header class="header">
+            <div class="profile-section">
+                <div class="avatar">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2" />
+                        <path d="M6 21C6 17.134 8.686 14 12 14C15.314 14 18 17.134 18 21" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" />
+                    </svg>
                 </div>
-                <div class="profile-details">
-                    <h1 class="name">Victor Cuaresma Salhuana</h1>
-                    <p class="role">Analista de Sistemas</p>
-                    <div class="contact-badge">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.5">
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                            </path>
-                        </svg>
-                        <span>+51 917 360 503</span>
-                    </div>
+                <div class="profile-info">
+                    <h1>Victor Cuaresma Salhuana</h1>
+                    <p class="subtitle">Analista de Sistemas</p>
                 </div>
             </div>
         </header>
 
-        <!-- Payment Methods -->
-        <section class="payment-methods">
-            <div class="section-title">
-                <h2>💳 Elige tu Método de Pago</h2>
-                <p>Selecciona la opción más conveniente para ti</p>
-            </div>
-
-            <div class="methods-grid">
-                <!-- Yape / Plin -->
-                <div class="method-card yape-plin-card" onclick="openPaymentModal('yape-plin')">
-                    <div class="card-shine"></div>
-                    <div class="method-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
+        <main class="main-content">
+            <div class="payment-card">
+                <div class="card-header">
+                    <div class="icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"
+                                stroke-linejoin="round" />
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
                         </svg>
                     </div>
-                    <h3 class="method-name">Yape / Plin</h3>
-                    <p class="method-phone">+51 917 360 503</p>
-                    <div class="method-badge">Instantáneo</div>
+                    <h2>Métodos de Pago</h2>
                 </div>
 
-                <!-- Prexpe -->
-                <div class="method-card prexpe-card" onclick="openPaymentModal('prexpe')">
-                    <div class="card-shine"></div>
-                    <div class="method-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                            <line x1="1" y1="10" x2="23" y2="10"></line>
-                        </svg>
-                    </div>
-                    <h3 class="method-name">Prexpe</h3>
-                    <p class="method-phone">+51 917 360 503</p>
-                    <div class="method-badge">Seguro</div>
-                </div>
-
-                <!-- BIM -->
-                <div class="method-card bim-card" onclick="openPaymentModal('bim')">
-                    <div class="card-shine"></div>
-                    <div class="method-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <h3 class="method-name">BIM</h3>
-                    <p class="method-phone">+51 917 360 503</p>
-                    <div class="method-badge">Fácil</div>
-                </div>
-
-                <!-- Ligo -->
-                <div class="method-card ligo-card" onclick="openPaymentModal('ligo')">
-                    <div class="card-shine"></div>
-                    <div class="method-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                        </svg>
-                    </div>
-                    <h3 class="method-name">Ligo</h3>
-                    <p class="method-phone">Solo QR</p>
-                    <div class="method-badge">QR únicamente</div>
-                </div>
-
-                <!-- Tarjeta -->
-                <div class="method-card card-payment"
-                    onclick="window.open('https://linkdecobro.ligo.live/v3/3b7c523020454a118bae0cf97e9b493a', '_blank')">
-                    <div class="card-shine"></div>
-                    <div class="method-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
-                            <line x1="1" y1="10" x2="23" y2="10"></line>
-                        </svg>
-                    </div>
-                    <h3 class="method-name">Tarjeta</h3>
-                    <p class="method-phone">Crédito / Débito</p>
-                    <div class="method-badge">Pago en línea</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Bank Transfer Info -->
-        <section class="bank-info">
-            <div class="info-card">
-                <h3>📱 Transferencia Bancaria</h3>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <label>Número de Celular</label>
-                        <div class="info-value">
-                            <span id="phoneNum">+51 917 360 503</span>
-                            <button onclick="copyText('phoneNum')" class="copy-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                <div class="payment-methods">
+                    <!-- Ligo -->
+                    <div class="payment-method" data-method="ligo">
+                        <div class="method-header">
+                            <div class="method-icon ligo-icon">
+                                <span>L</span>
+                            </div>
+                            <div class="method-info">
+                                <h3>Ligo</h3>
+                                <p>Pago con QR o número</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleMethod('ligo')">
+                                <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
                         </div>
+                        <div class="method-details">
+                            <div class="qr-section">
+                                <img src="ligo.jpg" alt="Código QR Ligo - Victor Manuel Cuaresma" class="qr-image">
+                            </div>
+                            <div class="transfer-info">
+                                <div class="info-item">
+                                    <span class="label">Número de celular</span>
+                                    <div class="value-container">
+                                        <span class="value" id="phone-ligo">+51 917 360 503</span>
+                                        <button class="copy-btn" onclick="copyToClipboard('phone-ligo')">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path
+                                                    d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5"
+                                                    stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <label>Número de CCI</label>
-                        <div class="info-value">
-                            <span id="cciNum">77600100000339351409</span>
-                            <button onclick="copyText('cciNum')" class="copy-btn">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+
+                    <!-- Plin -->
+                    <div class="payment-method" data-method="plin">
+                        <div class="method-header">
+                            <div class="method-icon plin-icon">
+                                <span>P</span>
+                            </div>
+                            <div class="method-info">
+                                <h3>Plin</h3>
+                                <p>Solo escanea el QR</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleMethod('plin')">
+                                <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                             </button>
+                        </div>
+                        <div class="method-details">
+                            <div class="qr-section">
+                                <img src="plin.jpg" alt="Código QR Plin - Victor Cuaresma" class="qr-image">
+                            </div>
+                            <div class="transfer-info">
+                                <p class="payment-note">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                        <path d="M12 16V12M12 8H12.01" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    Ingresa al app de tu entidad financiera, elige Pago con QR y enfoca el código
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Prexpe -->
+                    <div class="payment-method" data-method="prexpe">
+                        <div class="method-header">
+                            <div class="method-icon prexpe-icon">
+                                <span>Px</span>
+                            </div>
+                            <div class="method-info">
+                                <h3>Prexpe</h3>
+                                <p>Pago con QR y número</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleMethod('prexpe')">
+                                <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="method-details">
+                            <div class="qr-section">
+                                <img src="prexpe.jpg" alt="Código QR Prexpe" class="qr-image">
+                            </div>
+                            <div class="transfer-info">
+                                <div class="info-item">
+                                    <span class="label">Número de celular</span>
+                                    <div class="value-container">
+                                        <span class="value" id="phone-prexpe">+51 917 360 503</span>
+                                        <button class="copy-btn" onclick="copyToClipboard('phone-prexpe')">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path
+                                                    d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5"
+                                                    stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de Crédito/Débito -->
+                    <div class="payment-method" data-method="card">
+                        <div class="method-header">
+                            <div class="method-icon card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="5" width="20" height="14" rx="2" stroke="currentColor"
+                                        stroke-width="2" />
+                                    <path d="M2 10H22" stroke="currentColor" stroke-width="2" />
+                                    <path d="M6 15H10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div class="method-info">
+                                <h3>Tarjeta Crédito/Débito</h3>
+                                <p>Visa o Mastercard</p>
+                            </div>
+                            <button class="expand-btn" onclick="toggleMethod('card')">
+                                <svg class="chevron" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="method-details">
+                            <div class="qr-section">
+                                <img src="tarjetacredito.jpg" alt="Pago con Tarjeta - Ligo" class="qr-image">
+                            </div>
+                            <div class="transfer-info">
+                                <div class="info-item">
+                                    <span class="label">Paga con tarjeta Visa o Mastercard</span>
+                                    <div class="value-container">
+                                        <a href="https://linkdecobro.ligo.live/v3/3b7c523020454a118bae0cf97e9b493a"
+                                            target="_blank" class="payment-link">
+                                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M10 6H6C4.89543 6 4 6.89543 4 8V18C4 19.1046 4.89543 20 6 20H16C17.1046 20 18 19.1046 18 18V14M14 4H20M20 4V10M20 4L10 14"
+                                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                            Abrir link de pago
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="payment-note">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M12 15V15.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                                        <path d="M12 9V12" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    Titular: Victor Cuaresma Salhuana
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
 
-        <!-- Footer -->
         <footer class="footer">
-            <p>© 2026/2027 Victor Cuaresma Salhuana. Todos los derechos reservados.</p>
+            <p>© 2026 Victor Cuaresma Salhuana. Todos los derechos reservados.</p>
         </footer>
     </div>
 
-    <!-- Payment Modal -->
-    <div class="modal" id="paymentModal">
-        <div class="modal-backdrop" onclick="closePaymentModal()"></div>
-        <div class="modal-container">
-            <button class="close-modal" onclick="closePaymentModal()">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-            </button>
-
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-icon" id="modalIcon"></div>
-                    <h2 id="modalTitle">Pagar con Yape</h2>
-                </div>
-
-                <div class="modal-body-grid">
-                    <div class="qr-section">
-                        <div class="qr-wrapper">
-                            <img id="qrImage" src="" alt="Código QR">
-                        </div>
-                    </div>
-
-                    <div class="instructions" id="instructions">
-                        <!-- Instructions will be inserted here -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Toast Notification -->
     <div class="toast" id="toast">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="20 6 9 17 4 12"></polyline>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
         </svg>
-        <span id="toastText">¡Copiado!</span>
+        <span>Copiado al portapapeles</span>
     </div>
 
     <script src="script.js"></script>
